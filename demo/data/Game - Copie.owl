@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2022/9/untitled-ontology-9"
+     xml:base="http://www.semanticweb.org/user/ontologies/2022/9/untitled-ontology-9"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Game="http://www.owl-ontologies.com/Game.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Game.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#hasDifficulty -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Game.owl#hasDifficulty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Game.owl#DifficultValuePartition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Game.owl#hasGenre"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#hasPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Game.owl#hasPlatform">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Game.owl#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Game.owl#creationDate">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Game.owl#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#DifficultValuePartition -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#DifficultValuePartition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#Easy"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#Hard"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#Normal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Easy -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Easy">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#DifficultValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Game -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Game">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Game.owl#Genre"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Game.owl#Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Genre -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Genre"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Hard -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Hard">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#DifficultValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#LeagueOfLegends -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#LeagueOfLegends">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#LinuxPlatform -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#LinuxPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#MacOSPlatform -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#MacOSPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Normal -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Normal">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#DifficultValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Online -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Online">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Platform -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Platform"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Player -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Player">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Puzzle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Puzzle">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#RolePlayGame -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#RolePlayGame">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Sudoku -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#Sudoku">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#WindowsPlatform -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#WindowsPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#WorldOfWarcraft -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Game.owl#WorldOfWarcraft">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Chess -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#Chess">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+        <Game:hasDifficulty rdf:resource="http://www.owl-ontologies.com/Game.owl#hard"/>
+        <Game:hasGenre rdf:resource="http://www.owl-ontologies.com/Game.owl#multiPlayer"/>
+        <Game:hasPlatform rdf:resource="http://www.owl-ontologies.com/Game.owl#centos"/>
+        <Game:creationDate>04-03-2005</Game:creationDate>
+        <Game:name>Chess</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#LeagueOfLegends -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#LeagueOfLegends">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#LeagueOfLegends"/>
+        <Game:hasDifficulty rdf:resource="http://www.owl-ontologies.com/Game.owl#easy"/>
+        <Game:hasGenre rdf:resource="http://www.owl-ontologies.com/Game.owl#multiPlayer"/>
+        <Game:hasPlatform rdf:resource="http://www.owl-ontologies.com/Game.owl#windows10"/>
+        <Game:creationDate>31-10-2009</Game:creationDate>
+        <Game:name>LeagueOfLegends</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Soduku -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#Soduku">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Sudoku"/>
+        <Game:hasDifficulty rdf:resource="http://www.owl-ontologies.com/Game.owl#normal"/>
+        <Game:hasGenre rdf:resource="http://www.owl-ontologies.com/Game.owl#singlePlayer"/>
+        <Game:hasPlatform rdf:resource="http://www.owl-ontologies.com/Game.owl#mac10.5"/>
+        <Game:creationDate>02-08-2001</Game:creationDate>
+        <Game:name>Soduku</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#Titris -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#Titris">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+        <Game:hasPlatform rdf:resource="http://www.owl-ontologies.com/Game.owl#centos"/>
+        <Game:creationDate>14-09-2000</Game:creationDate>
+        <Game:name>Titris</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#WorldOfWarCraft -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#WorldOfWarCraft">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#WorldOfWarcraft"/>
+        <Game:hasDifficulty rdf:resource="http://www.owl-ontologies.com/Game.owl#hard"/>
+        <Game:hasGenre rdf:resource="http://www.owl-ontologies.com/Game.owl#online"/>
+        <Game:hasGenre rdf:resource="http://www.owl-ontologies.com/Game.owl#playRoleGame"/>
+        <Game:hasPlatform rdf:resource="http://www.owl-ontologies.com/Game.owl#windows10"/>
+        <Game:creationDate>22-12-2004</Game:creationDate>
+        <Game:name>WorldOfWarCraft</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#candyCrash -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#candyCrash">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Game"/>
+        <Game:hasDifficulty rdf:resource="http://www.owl-ontologies.com/Game.owl#normal"/>
+        <Game:hasGenre rdf:resource="http://www.owl-ontologies.com/Game.owl#singlePlayer"/>
+        <Game:hasPlatform rdf:resource="http://www.owl-ontologies.com/Game.owl#mac10.5"/>
+        <Game:creationDate>06-08-2010</Game:creationDate>
+        <Game:name>candyCrash</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#centos -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#centos">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#LinuxPlatform"/>
+        <Game:creationDate>08-05-2006</Game:creationDate>
+        <Game:name>centos</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#easy -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#easy">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Easy"/>
+        <Game:name>easy</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#hard -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#hard">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Hard"/>
+        <Game:name>hard</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#mac10.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#mac10.5">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#MacOSPlatform"/>
+        <Game:creationDate>14-10-2007</Game:creationDate>
+        <Game:name>mac10.5</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#multiPlayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#multiPlayer">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Player"/>
+        <Game:name>multiPlayer</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#normal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#normal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Normal"/>
+        <Game:name>normal</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#online -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#online">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Online"/>
+        <Game:name>online</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#playRoleGame -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#playRoleGame">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#RolePlayGame"/>
+        <Game:name>playRoleGame</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#puzzle -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#puzzle">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Puzzle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#singlePlayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#singlePlayer">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#Player"/>
+        <Game:name>singlePlayer</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Game.owl#windows10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Game.owl#windows10">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Game.owl#WindowsPlatform"/>
+        <Game:hasGenre rdf:resource="http://www.owl-ontologies.com/Game.owl#singlePlayer"/>
+        <Game:creationDate>12-11-2003</Game:creationDate>
+        <Game:name>windows10</Game:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#Easy"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#Hard"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#Normal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#LinuxPlatform"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#MacOSPlatform"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Game.owl#WindowsPlatform"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
